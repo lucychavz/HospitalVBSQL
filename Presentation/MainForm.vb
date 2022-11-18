@@ -280,7 +280,7 @@ Public Class MainForm
     End Sub
 
     Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
-        OpenChildForm(Of FormHistory)(sender)
+        OpenChildForm(Of FormMedico)(sender)
     End Sub
 
     Private Sub btnCalendar_Click(sender As Object, e As EventArgs) Handles btnCalendar.Click

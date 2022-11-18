@@ -110,6 +110,21 @@
         MyBase.OnPaint(e)
         e.Graphics.DrawRectangle(New Pen(Color.FromArgb(61, 81, 135), 1), 0, 0, Me.Width - 1, Me.Height - 1)
     End Sub
+
+    Private Sub InitializeComponent()
+        Me.SuspendLayout()
+        '
+        'BaseFixedForm
+        '
+        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Name = "BaseFixedForm"
+        Me.ResumeLayout(False)
+
+    End Sub
+
+    Private Sub BaseFixedForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 #End Region
 
 

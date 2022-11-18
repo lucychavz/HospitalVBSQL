@@ -94,10 +94,10 @@
     <Compile Include="ChildForms\FormCalendar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\FormHistory.Designer.vb">
-      <DependentUpon>FormHistory.vb</DependentUpon>
+    <Compile Include="ChildForms\FormMedico.Designer.vb">
+      <DependentUpon>FormMedico.vb</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\FormHistory.vb">
+    <Compile Include="ChildForms\FormMedico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\FormIngresoMedico.Designer.vb">
@@ -188,11 +188,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BaseForms\BaseFixedForm.resx">
+      <DependentUpon>BaseFixedForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormCalendar.resx">
       <DependentUpon>FormCalendar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\FormHistory.resx">
-      <DependentUpon>FormHistory.vb</DependentUpon>
+    <EmbeddedResource Include="ChildForms\FormMedico.resx">
+      <DependentUpon>FormMedico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormIngresoMedico.resx">
       <DependentUpon>FormIngresoMedico.vb</DependentUpon>

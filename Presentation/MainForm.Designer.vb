@@ -24,9 +24,6 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.panelDesktop = New System.Windows.Forms.Panel()
-        Me.label3 = New System.Windows.Forms.Label()
-        Me.label2 = New System.Windows.Forms.Label()
-        Me.pictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelDesktopHeader = New System.Windows.Forms.Panel()
         Me.lblCaption = New System.Windows.Forms.Label()
         Me.btnChildFormClose = New System.Windows.Forms.Button()
@@ -50,9 +47,10 @@ Partial Class MainForm
         Me.btnMinimize = New System.Windows.Forms.Button()
         Me.btnMaximize = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelClientArea.SuspendLayout()
         Me.panelDesktop.SuspendLayout()
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelDesktopHeader.SuspendLayout()
         Me.panelSideMenu.SuspendLayout()
         Me.panelMenuHeader.SuspendLayout()
@@ -60,6 +58,7 @@ Partial Class MainForm
         CType(Me.btnSideMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelTitleBar.SuspendLayout()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelClientArea
@@ -73,50 +72,13 @@ Partial Class MainForm
         'panelDesktop
         '
         Me.panelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.panelDesktop.Controls.Add(Me.label3)
+        Me.panelDesktop.Controls.Add(Me.PictureBox1)
         Me.panelDesktop.Controls.Add(Me.label2)
-        Me.panelDesktop.Controls.Add(Me.pictureBox1)
         Me.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelDesktop.Location = New System.Drawing.Point(230, 70)
         Me.panelDesktop.Name = "panelDesktop"
         Me.panelDesktop.Size = New System.Drawing.Size(968, 528)
         Me.panelDesktop.TabIndex = 11
-        '
-        'label3
-        '
-        Me.label3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.label3.AutoSize = True
-        Me.label3.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label3.ForeColor = System.Drawing.Color.DarkGray
-        Me.label3.Location = New System.Drawing.Point(277, 321)
-        Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(378, 18)
-        Me.label3.TabIndex = 16
-        Me.label3.Text = "Programming and software development tutorials"
-        '
-        'label2
-        '
-        Me.label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.label2.AutoSize = True
-        Me.label2.Font = New System.Drawing.Font("Verdana", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.ForeColor = System.Drawing.Color.LightGray
-        Me.label2.Location = New System.Drawing.Point(349, 295)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(222, 26)
-        Me.label2.TabIndex = 15
-        Me.label2.Text = "RJ CODE ADVANCE"
-        '
-        'pictureBox1
-        '
-        Me.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pictureBox1.Image = CType(resources.GetObject("pictureBox1.Image"), System.Drawing.Image)
-        Me.pictureBox1.Location = New System.Drawing.Point(388, 184)
-        Me.pictureBox1.Name = "pictureBox1"
-        Me.pictureBox1.Size = New System.Drawing.Size(126, 108)
-        Me.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pictureBox1.TabIndex = 14
-        Me.pictureBox1.TabStop = False
         '
         'panelDesktopHeader
         '
@@ -132,7 +94,7 @@ Partial Class MainForm
         'lblCaption
         '
         Me.lblCaption.Dock = System.Windows.Forms.DockStyle.Left
-        Me.lblCaption.Font = New System.Drawing.Font("Montserrat", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCaption.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCaption.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblCaption.Location = New System.Drawing.Point(30, 0)
         Me.lblCaption.Name = "lblCaption"
@@ -243,7 +205,7 @@ Partial Class MainForm
         Me.btnHistory.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnHistory.Size = New System.Drawing.Size(230, 45)
         Me.btnHistory.TabIndex = 22
-        Me.btnHistory.Text = "  Historia"
+        Me.btnHistory.Text = "  Medico"
         Me.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnHistory.UseVisualStyleBackColor = True
         '
@@ -309,9 +271,9 @@ Partial Class MainForm
         Me.lblLastName.ForeColor = System.Drawing.Color.DarkGray
         Me.lblLastName.Location = New System.Drawing.Point(72, 36)
         Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(70, 16)
+        Me.lblLastName.Size = New System.Drawing.Size(57, 16)
         Me.lblLastName.TabIndex = 17
-        Me.lblLastName.Text = "LastName"
+        Me.lblLastName.Text = "Apellido"
         '
         'linkProfile
         '
@@ -322,10 +284,10 @@ Partial Class MainForm
         Me.linkProfile.LinkColor = System.Drawing.Color.CornflowerBlue
         Me.linkProfile.Location = New System.Drawing.Point(6, 78)
         Me.linkProfile.Name = "linkProfile"
-        Me.linkProfile.Size = New System.Drawing.Size(70, 17)
+        Me.linkProfile.Size = New System.Drawing.Size(58, 17)
         Me.linkProfile.TabIndex = 16
         Me.linkProfile.TabStop = True
-        Me.linkProfile.Text = "My Profile"
+        Me.linkProfile.Text = "Mi Perfil"
         '
         'pictureBoxPhoto
         '
@@ -357,9 +319,9 @@ Partial Class MainForm
         Me.lblPosition.ForeColor = System.Drawing.Color.DarkGray
         Me.lblPosition.Location = New System.Drawing.Point(72, 52)
         Me.lblPosition.Name = "lblPosition"
-        Me.lblPosition.Size = New System.Drawing.Size(56, 16)
+        Me.lblPosition.Size = New System.Drawing.Size(44, 16)
         Me.lblPosition.TabIndex = 15
-        Me.lblPosition.Text = "Position"
+        Me.lblPosition.Text = "Cargo"
         '
         'lblName
         '
@@ -368,9 +330,9 @@ Partial Class MainForm
         Me.lblName.ForeColor = System.Drawing.Color.Gainsboro
         Me.lblName.Location = New System.Drawing.Point(72, 19)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(45, 17)
+        Me.lblName.Size = New System.Drawing.Size(58, 17)
         Me.lblName.TabIndex = 14
-        Me.lblName.Text = "Name"
+        Me.lblName.Text = "Nombre"
         '
         'panelTitleBar
         '
@@ -389,13 +351,13 @@ Partial Class MainForm
         'label1
         '
         Me.label1.AutoSize = True
-        Me.label1.Font = New System.Drawing.Font("Montserrat", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.label1.Location = New System.Drawing.Point(35, 11)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(132, 18)
+        Me.label1.Size = New System.Drawing.Size(164, 17)
         Me.label1.TabIndex = 15
-        Me.label1.Text = "Full Login Project"
+        Me.label1.Text = "Clinica Salud y Bienestar"
         '
         'pictureBox2
         '
@@ -449,6 +411,28 @@ Partial Class MainForm
         Me.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'label2
+        '
+        Me.label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.label2.AutoSize = True
+        Me.label2.Font = New System.Drawing.Font("Verdana", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label2.ForeColor = System.Drawing.Color.LightGray
+        Me.label2.Location = New System.Drawing.Point(291, 346)
+        Me.label2.Name = "label2"
+        Me.label2.Size = New System.Drawing.Size(345, 26)
+        Me.label2.TabIndex = 15
+        Me.label2.Text = "CLINICA SALUD Y BIENESTAR"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(331, 83)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(248, 248)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -457,11 +441,10 @@ Partial Class MainForm
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MainForm"
+        Me.Text = "Menu principal"
         Me.PanelClientArea.ResumeLayout(False)
         Me.panelDesktop.ResumeLayout(False)
         Me.panelDesktop.PerformLayout()
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelDesktopHeader.ResumeLayout(False)
         Me.panelSideMenu.ResumeLayout(False)
         Me.panelMenuHeader.ResumeLayout(False)
@@ -471,13 +454,11 @@ Partial Class MainForm
         Me.panelTitleBar.ResumeLayout(False)
         Me.panelTitleBar.PerformLayout()
         CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Private WithEvents panelDesktop As System.Windows.Forms.Panel
-    Private WithEvents label3 As System.Windows.Forms.Label
-    Private WithEvents label2 As System.Windows.Forms.Label
-    Friend WithEvents pictureBox1 As System.Windows.Forms.PictureBox
     Private WithEvents panelDesktopHeader As System.Windows.Forms.Panel
     Friend WithEvents lblCaption As System.Windows.Forms.Label
     Private WithEvents btnChildFormClose As System.Windows.Forms.Button
@@ -501,4 +482,6 @@ Partial Class MainForm
     Private WithEvents btnMinimize As System.Windows.Forms.Button
     Private WithEvents btnMaximize As System.Windows.Forms.Button
     Private WithEvents btnClose As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Private WithEvents label2 As Label
 End Class
